@@ -1,0 +1,16 @@
+$nav-background: rgb(41,41,41);
+$nav-color: white;
+$default-font-size: 12px;
+
+$site-header-background:#191919;
+
+%centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%linear-ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0%;
+}

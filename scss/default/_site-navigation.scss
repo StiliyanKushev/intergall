@@ -1,0 +1,62 @@
+.site-navigation{
+    background: $nav-background;
+    color: $nav-color;
+    @extend %centralize;
+    font-size: 16px;
+    font-weight: bolder;
+    height: 5.1rem;
+    width: 100vw;
+
+    position: fixed;
+    top: 0%;
+
+    .wrapper{
+        @extend %centralize;
+        justify-content: space-between;
+        padding: 1.3rem 4rem;
+    }
+
+    .site-branding{
+        padding-bottom: 0%;
+        font-size: 20px;
+
+        span:nth-child(2){
+            margin-left: .3rem;
+            color: rgb(170,170,170);
+        }
+    }
+    ul{
+        @extend %linear-ul;
+        li:not(:last-child){
+            padding-right: 1.5rem;
+        }
+        li:hover{
+            color: rgb(170,170,170);
+            cursor: pointer;
+        }
+    }
+
+    @include respond(500px){
+        .wrapper{
+            width: 100vw;
+            padding: 1.3rem 0rem;
+            flex-direction: column;
+            justify-content: unset;
+        }
+        #nav-ul{
+            position: initial;
+            margin-top: .5rem;
+            background: #1f1f1f;
+            width: 100%;
+            ul{
+                justify-content: center;
+                align-items: center;
+                padding: .3rem;
+            }
+        }
+        p{
+            margin-top: .5rem;
+        }
+        height: 6.2rem;
+    }
+}

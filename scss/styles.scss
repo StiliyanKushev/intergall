@@ -1,0 +1,24 @@
+// import the font-awesome css
+@import "../fontawesome/css/all.css";
+
+// import the initial css files
+@import "./initial/variables";
+@import "./initial/mixins";
+@import "./initial/reset";
+@import "./initial/typography";
+
+// import all default (static) and semantic css
+@import "./default/layout";
+@import "./default/site-navigation";
+@import "./default/site-header";
+@import "./default/site-footer";
+
+// import all css for the home page
+// @import "./page_content/home_page/";
+
+// import all css for the home login and the register page
+
+// import all css for the profile page
+
+//import all css for the your images page
+

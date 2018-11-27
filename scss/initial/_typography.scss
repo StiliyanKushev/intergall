@@ -1,0 +1,21 @@
+html{
+    font-size: $default-font-size;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+body, table,th,td,form,input,textarea,option,select{
+    font: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1{
+    font-size: 6rem;
+}
+h3{
+    font-size: 3rem;
+}

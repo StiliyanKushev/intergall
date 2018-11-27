@@ -1,0 +1,89 @@
+.site-header{
+    background: $site-header-background;
+    height: calc(100vh - 5.1rem);
+    margin-top: 5.1rem;
+    text-align: center;
+    @extend %centralize;
+
+    .wrapper{
+        width: 100rem;
+        display: flex;
+        flex-wrap: wrap;
+        height: 80vh;
+        color: white;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    section{
+        @extend %centralize;
+        flex-direction: column;
+        width: 50%;
+        height: fit-content;
+        padding: 2rem 0%;
+    }
+    section:nth-child(1){
+        width: 100%;
+        border-bottom: 3px solid white;
+
+        p{
+            font-size: 2rem;
+        }
+    }
+    section:nth-child(3){
+        padding-left: 2rem;
+    }
+    section:nth-child(2){
+        border-right: 3px solid white;
+        padding-right: 2rem;
+    }
+    p{
+        font-size: 1.6rem;
+        font-style: italic;
+    }
+    span{
+        color: rgb(140,140,140);
+    }
+
+    @include respond(768px) {
+        p{
+            font-size: 1.3rem;
+        }
+        h1{
+            font-size: 4rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        section:nth-child(2),
+        section:nth-child(3),{
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+    }
+    @include respond(425px) {
+        section{
+            width: 100%;
+        }
+        section:nth-child(2){
+            border-right: 0 solid white;
+        }
+    }
+    @include respond(320px) {
+        p{
+            font-size: 1.2rem;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        h3{
+            font-size: 1.7rem;
+        }
+        section{
+            width: 100%;
+        }
+        section:nth-child(2){
+            border-right: 0 solid white;
+        }
+    }
+}
