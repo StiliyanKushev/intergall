@@ -1,6 +1,7 @@
 .site-navigation{
     background: $nav-background;
     color: $nav-color;
+    
     @extend %centralize;
     font-size: 16px;
     font-weight: bolder;
@@ -46,7 +47,7 @@
         #nav-ul{
             position: initial;
             margin-top: .5rem;
-            background: #1f1f1f;
+            background: $footer-background;
             width: 100%;
             ul{
                 justify-content: center;

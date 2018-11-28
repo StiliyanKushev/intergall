@@ -1,8 +1,9 @@
 .site-footer{
     width: 100%;
     @extend %centralize;
-    background: #292929;
-    color: white;
+
+    background: $footer-background;
+    color: $footer-color;
 
     .wrapper{
         width: 70rem;
@@ -18,21 +19,43 @@
         // background: green;
     }
     ul:nth-child(3){
+        padding: 1rem;
+        background: white;
+        width: 150px;
+        font-weight: bolder;
+        border-radius: 4px;
+        div{
+            @extend %linear-ul;
+            align-items: center;
+        }
         li{
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             &::before{
                 content: "";
             }
         }
+        li:not(:last-child){
+            margin-right: 2rem;
+        }
+        p{
+            width: 100%;
+            color: black;
+            font-size: 1rem;
+            text-align: justify;
+        }
     }
     li{
-        padding-left: 1rem;
+        padding-left: 0rem;
         font-size: 1.4rem;
-        font-weight: bolder;
         &::before{
             content: "- ";
         }
     }
+
+    #facebook-li {color: #395693}
+    #github-li {color: #302F2F}
+    #gmail-li {color: #D6493C}
+
     @include respond(425px) {
         .wrapper{
             flex-direction: column;
@@ -42,9 +65,14 @@
             padding-top: 1rem;
         }
         ul:nth-child(3){
+            margin-top: .5rem;
             display: flex;
+            flex-direction: column;
             width: 100%;
             justify-content: space-evenly;
+            div{
+                justify-content: space-evenly;
+            }
             li{
                 font-size: 2.5rem;
                 &::before{

@@ -1,5 +1,7 @@
 .site-header{
-    background: $site-header-background;
+    background: $header-background;
+    color: $header-color;
+
     height: calc(100vh - 5.1rem);
     margin-top: 5.1rem;
     text-align: center;
@@ -10,7 +12,6 @@
         display: flex;
         flex-wrap: wrap;
         height: 80vh;
-        color: white;
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -24,18 +25,18 @@
     }
     section:nth-child(1){
         width: 100%;
-        border-bottom: 3px solid white;
-
+        padding-right: 1rem;
+        box-shadow: 5px 4px 0px white;
         p{
             font-size: 2rem;
         }
     }
+    section:nth-child(2){
+        border-right: 2px solid white;
+        padding-right: 2rem;
+    }
     section:nth-child(3){
         padding-left: 2rem;
-    }
-    section:nth-child(2){
-        border-right: 3px solid white;
-        padding-right: 2rem;
     }
     p{
         font-size: 1.6rem;

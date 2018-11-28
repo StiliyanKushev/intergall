@@ -1,8 +1,17 @@
-$nav-background: rgb(41,41,41);
+$nav-background: #070709;
 $nav-color: white;
-$default-font-size: 12px;
 
-$site-header-background:#191919;
+$default-font-size: 12px;
+$important-text-color:#4717F6;
+
+$header-background: 
+linear-gradient(to right,
+ rgba(16,11,26,1) 0%,
+  rgba(19,23,54,1) 100%);
+$header-color:white;
+
+$footer-background:#0E0A19;
+$footer-color:$nav-color;
 
 %centralize {
     display: flex;
