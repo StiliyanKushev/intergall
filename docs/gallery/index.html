@@ -5,29 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/intergall/css/styles.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <script src="/javascript/auth.js"></script>
-    <script src="/javascript/req.js"></script>
-    <script src="/javascript/login.js"></script>
-    <script src="/javascript/register.js"></script>
+    <script src="/intergall/javascript/auth.js"></script>
+    <script src="/intergall/javascript/req.js"></script>
+    <script src="/intergall/javascript/login.js"></script>
+    <script src="/intergall/javascript/register.js"></script>
     <nav class="site-navigation">
         <div class="wrapper">
             <p class="site-branding">
-                <a href="/">
+                <a href="/intergall/">
                     <span>INTER</span><span class="important-text">GALL</span>
                 </a>
             </p>
             <div id="nav-ul">
                 <ul>
-                    <li> <a href="/gallery">Gallery</a></li>
-                    <li id="second-nav-li"> <a href="/register">Register</a></li>
-                    <li id="third-nav-li"> <a href="/login">Login</a></li>
+                    <li> <a href="/intergall/gallery">Gallery</a></li>
+                    <li id="second-nav-li"> <a href="/intergall/register">Register</a></li>
+                    <li id="third-nav-li"> <a href="/intergall/login">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -54,7 +54,7 @@
             }
         });
 
-        let str = "";
+        let str = "/intergall";
         str += "/";
         if (Auth.authToken()) {
             $("#second-nav-li a").text("Your Images");
