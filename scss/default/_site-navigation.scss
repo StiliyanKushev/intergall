@@ -11,6 +11,11 @@
     position: fixed;
     top: 0%;
 
+    .user-name{
+        text-decoration: underline;
+        position: fixed;
+    }
+
     .wrapper{
         @extend %centralize;
         justify-content: space-between;

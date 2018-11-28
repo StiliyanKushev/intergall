@@ -17,6 +17,7 @@
     <script src="{{site.baseurl}}/javascript/login.js"></script>
     <script src="{{site.baseurl}}/javascript/register.js"></script>
     <nav class="site-navigation">
+        <a href="{{site.baseurl}}/user-info" class="user-name"></a>
         <div class="wrapper">
             <p class="site-branding">
                 <a href="{{site.baseurl}}/">
@@ -55,6 +56,8 @@
         let str = "{{site.baseurl}}";
         str += "/";
         if (Auth.authToken()) {
+            $(".user-name").text(Auth.username());
+
             $("#second-nav-li a").text("Your Images");
             $("#second-nav-li a").attr("href", str + "your_images");
 

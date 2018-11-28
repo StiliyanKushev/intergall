@@ -17,6 +17,7 @@
     <script src="/intergall/javascript/login.js"></script>
     <script src="/intergall/javascript/register.js"></script>
     <nav class="site-navigation">
+        <a href="/intergall/user-info" class="user-name"></a>
         <div class="wrapper">
             <p class="site-branding">
                 <a href="/intergall/">
@@ -55,7 +56,7 @@
                         <input type="password" id="re-password" placeholder="********">
                     </div>
                     <div>
-                        <input type="submit" value="REGISTER" onclick="register()">
+                        <input type="button" value="REGISTER" onclick="register()">
                         <a href="/intergall/login">I already have an account.</a>
                     </div>
                 </form>
@@ -84,6 +85,8 @@
         let str = "/intergall";
         str += "/";
         if (Auth.authToken()) {
+            $(".user-name").text(Auth.username());
+
             $("#second-nav-li a").text("Your Images");
             $("#second-nav-li a").attr("href", str + "your_images");
 

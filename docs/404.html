@@ -17,6 +17,7 @@
     <script src="/intergall/javascript/login.js"></script>
     <script src="/intergall/javascript/register.js"></script>
     <nav class="site-navigation">
+        <a href="/intergall/user-info" class="user-name"></a>
         <div class="wrapper">
             <p class="site-branding">
                 <a href="/intergall/">
@@ -75,6 +76,8 @@
         let str = "/intergall";
         str += "/";
         if (Auth.authToken()) {
+            $(".user-name").text(Auth.username());
+
             $("#second-nav-li a").text("Your Images");
             $("#second-nav-li a").attr("href", str + "your_images");
 
