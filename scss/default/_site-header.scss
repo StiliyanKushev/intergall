@@ -26,7 +26,8 @@
     section:nth-child(1){
         width: 100%;
         padding-right: 1rem;
-        box-shadow: 5px 4px 0px white;
+        box-shadow: 3px 3px 0px white;
+        border-radius: 5px;
         p{
             font-size: 2rem;
         }
@@ -41,9 +42,6 @@
     p{
         font-size: 1.6rem;
         font-style: italic;
-    }
-    span{
-        color: rgb(140,140,140);
     }
 
     @include respond(768px) {
@@ -68,6 +66,11 @@
         }
         section:nth-child(2){
             border-right: 0 solid white;
+        }
+        section:first-child{
+            p{
+                font-size: 1.5rem;
+            }
         }
     }
     @include respond(320px) {

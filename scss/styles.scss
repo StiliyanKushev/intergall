@@ -13,10 +13,8 @@
 @import "./default/site-header";
 @import "./default/site-footer";
 
-// import all css for the home page
-// @import "./page_content/home_page/";
-
-// import all css for the home login and the register page
+// import all css for the login and the register page
+@import "./page_content/login-register_page/login-register";
 
 // import all css for the profile page
 

@@ -3,3 +3,34 @@ layout: default
 title: Login
 permalink: /login/
 ---
+
+<main class="site-login">
+    <div class="wrapper">
+        <section>
+            <h1>LOGIN <span class="important-text">NOW</span></h1>
+            <p>and be part of the big picture</p>
+        </section>
+        <section>
+            <div class="container">
+                <form action="#">
+                    <div>
+                        <label for="username">USERNAME</label>
+                        <input type="text" id="username" placeholder="stiliyankushev">
+                        <label for="email">EMAIL (optional)</label>
+                        <input type="email" id="email" placeholder="stiliyan@softuni.bg">
+                    </div>
+                    <div>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" placeholder="********">
+                        <label for="re-password">REPEAT PASSWORD</label>
+                        <input type="password" id="re-password" placeholder="********">
+                    </div>
+                    <div>
+                        <input type="submit" value="LOGIN">
+                        <a href="{{site.baseurl}}/register">I don't have an account yet.</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>

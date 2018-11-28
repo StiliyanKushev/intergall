@@ -2,7 +2,7 @@ $nav-background: #070709;
 $nav-color: white;
 
 $default-font-size: 12px;
-$important-text-color:#4717F6;
+$important-text-color:#491BEF;
 
 $header-background: 
 linear-gradient(to right,
@@ -12,6 +12,9 @@ $header-color:white;
 
 $footer-background:#0E0A19;
 $footer-color:$nav-color;
+
+$login-register-background:white;
+$login-register-border-background: linear-gradient(135deg, rgba(38,46,105,1) 0%, rgba(32,24,57,1) 100%);
 
 %centralize {
     display: flex;
