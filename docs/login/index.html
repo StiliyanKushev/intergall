@@ -62,16 +62,14 @@
 
     <script>
         $("#third-nav-li a").on("click", function () {
-            if($("#third-nav-li a").text() == "Logout"){
+            if ($("#third-nav-li a").text() == "Logout") {
                 Req.logoutUser().then(res => {
                     let beg = window.location.href;
                     let url = "";
-                    let slash_count = 0;
-                    for (let i = 0; i < beg.length; i++) {
-                        if (beg[i] == "/") slash_count++;
-                        url += beg[i];
-                        if (slash_count == 3 && beg[i + 1] != "i") break;
+                    if (beg.includes("localhost")) {
+                        url = "http://localhost:3000/";
                     }
+                    else url = "https://stiliyankushev.github.io/intergall/";
                     window.location.replace(url);
                 }).catch(err => {
                     console.log(err);
