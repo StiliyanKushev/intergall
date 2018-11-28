@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    <script src="{{site.baseurl}}/javascript/auth.js"></script>
+    <script src="{{site.baseurl}}/javascript/req.js"></script>
+    <script src="{{site.baseurl}}/javascript/login.js"></script>
+    <script src="{{site.baseurl}}/javascript/register.js"></script>
     <nav class="site-navigation">
         <div class="wrapper">
             <p class="site-branding">
@@ -22,14 +26,44 @@
             <div id="nav-ul">
                 <ul>
                     <li> <a href="{{site.baseurl}}/gallery">Gallery</a></li>
-                    <li> <a href="{{site.baseurl}}/register">Register</a></li>
-                    <li> <a href="{{site.baseurl}}/login">Login</a></li>
+                    <li id="second-nav-li"> <a href="{{site.baseurl}}/register">Register</a></li>
+                    <li id="third-nav-li"> <a href="{{site.baseurl}}/login">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     {{content}}
+
+    <script>
+        $("#third-nav-li a").on("click", function () {
+            if($("#third-nav-li a").text() == "Logout"){
+                Req.logoutUser().then(res => {
+                    let beg = window.location.href;
+                    let url = "";
+                    let slash_count = 0;
+                    for (let i = 0; i < beg.length; i++) {
+                        if (beg[i] == "/") slash_count++;
+                        url += beg[i];
+                        if (slash_count == 3 && beg[i + 1] != "i") break;
+                    }
+                    window.location.replace(url);
+                }).catch(err => {
+                    console.log(err);
+                });
+            }
+        });
+
+        let str = "{{site.baseurl}}";
+        str += "/";
+        if (Auth.authToken()) {
+            $("#second-nav-li a").text("Your Images");
+            $("#second-nav-li a").attr("href", str + "your_images");
+
+            $("#third-nav-li a").text("Logout");
+            $("#third-nav-li a").attr("href", "#");
+        }
+    </script>
 
     <footer class="site-footer">
         <div class="wrapper">
