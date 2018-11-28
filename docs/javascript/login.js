@@ -5,7 +5,8 @@ function login() {
     for(let i = 0; i < beg.length;i++){
         if(beg[i] == "/") slash_count++;
         url += beg[i];
-        if(slash_count == 3 && beg[i + 1] != "i") break;
+        if(beg[i + 1] == "i" && slash_count == 3) continue;
+        if(slash_count == 3) break;
     }
     let username = $("#username").val();
     let password = $("#password").val();
