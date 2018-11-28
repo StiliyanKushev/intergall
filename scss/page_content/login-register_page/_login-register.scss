@@ -71,6 +71,7 @@
                 height: 12.8rem;
                 justify-content: space-between;
                 input{
+                    width: 100%;
                     cursor: pointer;
                     background: $important-text-color;
                     color: white;
@@ -127,7 +128,6 @@
             }
         }
     }
-
     @include respond(768px) {
         p{
             font-size: 1.3rem;
