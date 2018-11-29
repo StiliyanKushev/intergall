@@ -60,7 +60,7 @@
             padding-right: 0rem;
         }
     }
-    @include respond(425px) {
+    @include respond(650px) {
         section{
             width: 100%;
         }

@@ -42,7 +42,11 @@
         }
     }
 
-    @include respond(500px){
+    @include respond(750px){
+        .user-name{
+            right: 2rem;
+            top: 1.2rem;
+        }
         .wrapper{
             width: 100vw;
             padding: 1.3rem 0rem;

@@ -56,16 +56,18 @@
     #github-li {color: #302F2F}
     #gmail-li {color: #D6493C}
 
-    @include respond(425px) {
+    @include respond(780px){
         .wrapper{
-            flex-direction: column;
-            align-items: initial;
+            flex-wrap: wrap;
         }
-        ul{
-            padding-top: 1rem;
+        ul:nth-child(1){
+            width: 55%;
+        }
+        ul:nth-child(2){
+            width: 40%;
         }
         ul:nth-child(3){
-            margin-top: .5rem;
+            margin-top: 1rem;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -73,12 +75,27 @@
             div{
                 justify-content: space-evenly;
             }
+            p{
+                text-align: center;
+            }
             li{
                 font-size: 2.5rem;
                 &::before{
                     content: "";
                 }
             }
+        }
+    }
+
+    @include respond(578px) {
+        .wrapper{
+            flex-direction: column;
+            align-items: initial;
+            flex-wrap: unset;
+        }
+        ul{
+            width: 100% !important;
+            padding-top: 1rem;
         }
     }
 }

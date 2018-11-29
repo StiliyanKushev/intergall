@@ -1,0 +1,45 @@
+.site-images{
+    height: 100vh;
+    background: $header-background;
+    
+    @extend %centralize;
+    align-items: unset;
+    margin-top: 5.1rem;
+
+    .wrapper{
+        width: 100%;
+        background: red;
+    }
+
+    section:nth-child(1){
+        background: $add-image-section-background;
+        height: 15rem;
+        width: 100%;
+
+        @extend %centralize;
+        justify-content: space-evenly;
+
+        & > *{
+            outline: none;
+            border: none;
+            font-size: 2rem;
+            width: 40%;
+            padding: 1rem 2rem;
+        }
+
+        #image-url,
+        #add-image-button{
+            background: rgb(240,240,240);
+            border-radius: 10px;
+            box-shadow: 0 2px .3rem rgba(0,0,0,0.3);
+        }
+        #add-image-button{
+            background: rgba(45, 139, 45, 0.911);
+            color: rgba(255, 255, 255, 0.856);
+            font-weight: bolder;
+        }
+    }
+    section:nth-child(2){
+        
+    }
+}

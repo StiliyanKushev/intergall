@@ -12,10 +12,6 @@
 </head>
 
 <body>
-    <script src="{{site.baseurl}}/javascript/auth.js"></script>
-    <script src="{{site.baseurl}}/javascript/req.js"></script>
-    <script src="{{site.baseurl}}/javascript/login.js"></script>
-    <script src="{{site.baseurl}}/javascript/register.js"></script>
     <nav class="site-navigation">
         <a href="{{site.baseurl}}/user-info" class="user-name"></a>
         <div class="wrapper">
@@ -36,23 +32,14 @@
 
     {{content}}
 
+    <script src="{{site.baseurl}}/javascript/auth.js"></script>
+    <script src="{{site.baseurl}}/javascript/req.js"></script>
+    <script src="{{site.baseurl}}/javascript/login.js"></script>
+    <script src="{{site.baseurl}}/javascript/register.js"></script>
+    <script src="{{site.baseurl}}/javascript/logout.js"></script>
+    <script src="{{site.baseurl}}/javascript/loadimages.js"></script>
+    <script src="{{site.baseurl}}/javascript/image-operations.js"></script>
     <script>
-        $("#third-nav-li a").on("click", function () {
-            if ($("#third-nav-li a").text() == "Logout") {
-                Req.logoutUser().then(res => {
-                    let beg = window.location.href;
-                    let url = "";
-                    if (beg.includes("localhost")) {
-                        url = "http://localhost:3000/";
-                    }
-                    else url = "https://stiliyankushev.github.io/intergall/";
-                    window.location.replace(url);
-                }).catch(err => {
-                    console.log(err);
-                });
-            }
-        });
-
         let str = "{{site.baseurl}}";
         str += "/";
         if (Auth.authToken()) {

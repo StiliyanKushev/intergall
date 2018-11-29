@@ -1,6 +1,6 @@
-const BASE_URL = 'https://baas.kinvey.com/'
-const APP_KEY = 'kid_B1rTIUtAm'
-const APP_SECRET = '7d288f429d6b43bd9da17b1e607b6d60'
+const BASE_URL = 'https://baas.kinvey.com/';
+const APP_KEY = 'kid_B1rTIUtAm';
+const APP_SECRET = '7d288f429d6b43bd9da17b1e607b6d60';
 const AUTH_HEADERS = {
     'Authorization': "Basic " + btoa(APP_KEY + ":" + APP_SECRET)
 }
@@ -62,6 +62,7 @@ const Req = (function () {
             });
         });
     }
+
     function getOne(collectionName, id) {
         return new Promise(function (resolve, reject) {
             $.ajax({
@@ -77,7 +78,7 @@ const Req = (function () {
             });
         });
     }
-    function post(collectionName, data) {
+    function addOne(collectionName, data) {
         return new Promise(function (resolve, reject) {
             $.ajax({
                 method:'POST',
@@ -93,7 +94,7 @@ const Req = (function () {
             });
         });
     }
-    function put(collectionName, id, data) {
+    function editOne(collectionName, id, data) {
         return new Promise(function (resolve, reject) {
             $.ajax({
                 method:'PUT',
@@ -102,6 +103,21 @@ const Req = (function () {
                 data:data,
                 success:function (res) {
                     resolve(message);
+                },
+                error:function (err) {
+                    reject(err);
+                }
+            });
+        });
+    }
+    function deleteOne(collectionName, id) {
+        return new Promise(function (resolve, reject) {
+            $.ajax({
+                method:'Delete',
+                url: BASE_URL + `appdata/${APP_KEY}/${collectionName}/${id}`,
+                headers:{'Authorization':`Kinvey ${Auth.authToken()}`},
+                success:function (res) {
+                    resolve(res);
                 },
                 error:function (err) {
                     reject(err);
@@ -127,28 +143,13 @@ const Req = (function () {
             });
         });
     }
-    function deleteOne(collectionName, id) {
-        return new Promise(function (resolve, reject) {
-            $.ajax({
-                method:'Delete',
-                url: BASE_URL + `appdata/${APP_KEY}/${collectionName}/${id}`,
-                headers:{'Authorization':`Kinvey ${Auth.authToken()}`},
-                success:function (res) {
-                    resolve(res);
-                },
-                error:function (err) {
-                    reject(err);
-                }
-            });
-        });
-    }
     return {
         registerUser,
         loginUser,
         logoutUser,
         getOne,
-        post,
-        put,
+        addOne,
+        editOne,
         getAll,
         deleteOne
     }
