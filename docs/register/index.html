@@ -22,7 +22,7 @@
             </p>
             <div id="nav-ul">
                 <ul>
-                    <li> <a href="/intergall/gallery">Gallery</a></li>
+                    <li id="first-nav-li" style="display:none"> <a href="/intergall/gallery">Gallery</a></li>
                     <li id="second-nav-li"> <a href="/intergall/register">Register</a></li>
                     <li id="third-nav-li"> <a href="/intergall/login">Login</a></li>
                 </ul>
@@ -72,6 +72,7 @@
         let str = "/intergall";
         str += "/";
         if (Auth.authToken()) {
+            $("#first-nav-li").css("display","block");
             $(".user-name").text(Auth.username());
 
             $("#second-nav-li a").text("Your Images");

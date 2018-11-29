@@ -1,6 +1,44 @@
-.site-images{
+body{
     background: $header-background;
+}
+.gallery{
+    .item {
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        grid-row-end: span 1;
+        grid-column-end: span 1;
+        border-radius: 5px;
+        
+        div{
+            position: relative;
+            bottom: 0px;
+            display: flex;
+            font-size: 1.4rem;
+            font-weight: bolder;
+            input{
+                border-radius: 5px;
+                width: 50%;
+                outline: none;
+                border: none;
+                color:white;
+                background: none;
+                padding: .5rem 0rem;
+                margin: 1rem;
+                box-shadow: 0 3px .5rem rgba(0,0,0,0.7);
+            }
+            input:nth-child(1){
+               display: none !important;
+            }
+            input:nth-child(2){
+                display: none !important;
+            }
+        }
+    }
+}
 
+.site-images{
+    // background: $header-background;
     @extend %centralize;
     align-items: unset;
     margin-top: 5.1rem;
@@ -13,7 +51,6 @@
     .wrapper{
         width: 100rem;
         height: fit-content;
-        // background: red;
     }
 
     section:nth-child(1){
@@ -67,11 +104,37 @@
             grid-auto-flow: row dense;
         }
         .item {
-            // background:  url('https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');
             background-size: cover !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
             grid-row-end: span 1;
+            grid-column-end: span 1;
+            border-radius: 5px;
+            
+            div{
+                position: relative;
+                bottom: 0px;
+                display: flex;
+                font-size: 1.4rem;
+                font-weight: bolder;
+                input{
+                    border-radius: 5px;
+                    width: 50%;
+                    outline: none;
+                    border: none;
+                    color:white;
+                    background: none;
+                    padding: .5rem 0rem;
+                    margin: 1rem;
+                    box-shadow: 0 3px .5rem rgba(0,0,0,0.7);
+                }
+                input:nth-child(1){
+                    background: rgb(75, 75, 192);
+                }
+                input:nth-child(2){
+                    background: rgb(202, 34, 34);
+                }
+            }
         }
         .portrait {
             grid-row-end: span 3;
@@ -87,8 +150,9 @@
             padding-top: 2rem !important;
             padding-bottom: 1rem !important;
             
-            & > *{
-                width: 70%;
+            input{
+                width: 80%;
+                font-size: 1.4rem !important;
             }
         }
     }
