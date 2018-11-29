@@ -1,20 +1,27 @@
 .site-images{
-    height: 100vh;
     background: $header-background;
-    
+
     @extend %centralize;
     align-items: unset;
     margin-top: 5.1rem;
 
+    height: fit-content;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+
     .wrapper{
-        width: 100%;
-        background: red;
+        width: 100rem;
+        height: fit-content;
+        // background: red;
     }
 
     section:nth-child(1){
-        background: $add-image-section-background;
+        // background: $add-image-section-background;
         height: 15rem;
         width: 100%;
+        position: relative;
+        z-index: 2;
 
         @extend %centralize;
         justify-content: space-evenly;
@@ -39,7 +46,50 @@
             font-weight: bolder;
         }
     }
+    #white-background{
+        background: $add-image-section-background;
+        position: absolute;
+        width: 100%;
+        height: 15rem;
+    }
     section:nth-child(2){
-        
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        @supports(display: grid) {
+            display: block;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-auto-rows: 150px;
+            grid-auto-flow: row dense;
+        }
+        .item {
+            // background:  url('https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            grid-row-end: span 1;
+        }
+        .portrait {
+            grid-row-end: span 3;
+        }
+        .landscape {
+            grid-column-end: auto;
+        }
+    }
+
+    @include respond(620px) {
+        section:nth-child(1){
+            flex-direction: column !important;
+            padding-top: 2rem !important;
+            padding-bottom: 1rem !important;
+            
+            & > *{
+                width: 70%;
+            }
+        }
     }
 }
