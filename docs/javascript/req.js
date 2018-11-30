@@ -102,7 +102,7 @@ const Req = (function () {
                 headers:{'Authorization':`Kinvey ${Auth.authToken()}`},
                 data:data,
                 success:function (res) {
-                    resolve(message);
+                    resolve(res);
                 },
                 error:function (err) {
                     reject(err);

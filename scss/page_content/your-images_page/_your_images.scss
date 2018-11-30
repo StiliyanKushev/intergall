@@ -99,7 +99,7 @@ body{
         .grid {
             display: grid;
             grid-gap: 30px;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
             grid-auto-rows: 150px;
             grid-auto-flow: row dense;
         }
@@ -117,7 +117,8 @@ body{
                 display: flex;
                 font-size: 1.4rem;
                 font-weight: bolder;
-                input{
+                input,
+                button{
                     border-radius: 5px;
                     width: 50%;
                     outline: none;
