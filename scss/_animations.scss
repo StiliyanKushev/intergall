@@ -1,0 +1,10 @@
+body.loaded {
+    .site-login,
+    .site-register,
+    .site-header{
+        section{
+            opacity: 100;
+            bottom: inherit;
+        }
+    }
+}

@@ -22,11 +22,17 @@
         width: 50%;
         height: fit-content;
         padding: 2rem 0%;
+        
+        position: relative;
+        opacity: 0;
+        transition: opacity 1s, box-shadow 1s;
+        transition-timing-function: ease-out;
     }
     section:nth-child(1){
         width: 100%;
         padding-right: 1rem;
-        box-shadow: 3px 3px 0px white;
+        box-shadow: 3px 3px 0px rgba(255,255,255,0.1);
+
         border-radius: 5px;
         p{
             font-size: 2rem;

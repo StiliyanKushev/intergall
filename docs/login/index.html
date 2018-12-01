@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="document.body.className += ' loaded';">
     <nav class="site-navigation">
         <a href="#" class="user-name"></a>
         <div class="wrapper">
@@ -48,7 +48,7 @@
                         <input type="password" id="password" placeholder="********">
                     </div>
                     <div>
-                        <input type="button" value="LOGIN" onclick="login()">
+                        <input class="button-submit" type="button" value="LOGIN" onclick="login()">
                         <a href="/intergall/register">I don't have an account yet.</a>
                     </div>
                 </form>

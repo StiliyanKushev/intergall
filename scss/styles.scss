@@ -13,10 +13,11 @@
 @import "./default/site-header";
 @import "./default/site-footer";
 
+//import all css animations
+@import "./animations";
+
 // import all css for the login and the register page
 @import "./page_content/login-register_page/login-register";
-
-// import all css for the profile page
 
 //import all css for the your images page
 @import "./page_content/your-images_page/your_images";
