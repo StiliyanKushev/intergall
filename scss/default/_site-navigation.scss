@@ -1,35 +1,29 @@
 .site-navigation{
     background: $nav-background;
     color: $nav-color;
-    
     @extend %centralize;
-    font-size: 16px;
-    font-weight: bolder;
     height: 5.1rem;
     width: 100vw;
-
     position: fixed;
     z-index: 3;
     top: 0%;
-
+    font-size: 16px;
+    font-weight: bolder;
     .user-name{
-        text-decoration: underline;
         position: fixed;
+        text-decoration: underline;
     }
-
     .wrapper{
         @extend %centralize;
         justify-content: space-between;
         padding: 1.3rem 4rem;
     }
-
     .site-branding{
         padding-bottom: 0%;
         font-size: 20px;
-
         span:nth-child(2){
-            margin-left: .3rem;
             color: rgb(170,170,170);
+            margin-left: .3rem;
         }
     }
     ul{
@@ -42,23 +36,23 @@
             cursor: pointer;
         }
     }
-
     @include respond(750px){
+        height: 6.2rem;
         .user-name{
             right: 2rem;
             top: 1.2rem;
         }
         .wrapper{
-            width: 100vw;
-            padding: 1.3rem 0rem;
             flex-direction: column;
             justify-content: unset;
+            width: 100vw;
+            padding: 1.3rem 0rem;
         }
         #nav-ul{
-            position: initial;
-            margin-top: .5rem;
             background: $footer-background;
             width: 100%;
+            margin-top: .5rem;
+            position: initial;
             ul{
                 justify-content: center;
                 align-items: center;
@@ -68,6 +62,5 @@
         p{
             margin-top: .5rem;
         }
-        height: 6.2rem;
     }
 }

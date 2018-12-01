@@ -1,29 +1,25 @@
 .site-footer{
-    width: 100%;
     @extend %centralize;
-
     background: $footer-background;
     color: $footer-color;
-
+    width: 100%;
     .wrapper{
-        width: 70rem;
         @extend %centralize;
         justify-content: space-between;
+        width: 70rem;
         padding: 1.5rem 2.6rem;
         font-size: 2.4rem;
     }
-
     ul{
         width: auto;
         list-style-type: none;
-        // background: green;
     }
     ul:nth-child(3){
-        padding: 1rem;
         background: white;
         width: 150px;
-        font-weight: bolder;
+        padding: 1rem;
         border-radius: 4px;
+        font-weight: bolder;
         div{
             @extend %linear-ul;
             align-items: center;
@@ -51,11 +47,9 @@
             content: "- ";
         }
     }
-
     #facebook-li {color: #395693}
     #github-li {color: #302F2F}
     #gmail-li {color: #D6493C}
-
     @include respond(780px){
         .wrapper{
             flex-wrap: wrap;
@@ -67,11 +61,11 @@
             width: 40%;
         }
         ul:nth-child(3){
-            margin-top: 1rem;
             display: flex;
+            justify-content: space-evenly;
             flex-direction: column;
             width: 100%;
-            justify-content: space-evenly;
+            margin-top: 1rem;
             div{
                 justify-content: space-evenly;
             }
@@ -86,7 +80,6 @@
             }
         }
     }
-
     @include respond(578px) {
         .wrapper{
             flex-direction: column;

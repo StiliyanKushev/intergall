@@ -1,22 +1,19 @@
-$nav-background: #070709;
-$nav-color: white;
-
 $default-font-size: 12px;
 $important-text-color:#491BEF;
 
-$add-image-section-background:linear-gradient(to right, rgba(242,242,242,1) 0%, rgba(250,250,250,1) 100%);
+$nav-background: #070709;
+$nav-color: white;
 
-$header-background: 
-linear-gradient(to right,
- rgba(16,11,26,1) 0%,
-  rgba(19,23,54,1) 100%);
+$header-background: linear-gradient(to right,rgba(16,11,26,1) 0%,rgba(19,23,54,1) 100%);
 $header-color:white;
-
-$footer-background:#0E0A19;
-$footer-color:$nav-color;
 
 $login-register-background:white;
 $login-register-border-background: linear-gradient(135deg, rgba(38,46,105,1) 0%, rgba(32,24,57,1) 100%);
+
+$add-image-section-background:linear-gradient(to right, rgba(242,242,242,1) 0%, rgba(250,250,250,1) 100%);
+
+$footer-background:#0E0A19;
+$footer-color:$nav-color;
 
 %centralize {
     display: flex;

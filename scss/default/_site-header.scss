@@ -1,28 +1,24 @@
 .site-header{
     background: $header-background;
     color: $header-color;
-
+    @extend %centralize;
     height: calc(100vh - 5.1rem);
     margin-top: 5.1rem;
     text-align: center;
-    @extend %centralize;
-
     .wrapper{
-        width: 100rem;
         display: flex;
         flex-wrap: wrap;
+        width: 100rem;
         height: 80vh;
         padding-left: 3rem;
         padding-right: 3rem;
     }
-
     section{
         @extend %centralize;
         flex-direction: column;
         width: 50%;
         height: fit-content;
-        padding: 2rem 0%;
-        
+        padding: 2rem 0%;   
         position: relative;
         opacity: 0;
         transition: opacity 1s, box-shadow 1s;
@@ -32,7 +28,6 @@
         width: 100%;
         padding-right: 1rem;
         box-shadow: 3px 3px 0px white;
-
         border-radius: 5px;
         p{
             font-size: 2rem;
@@ -49,7 +44,6 @@
         font-size: 1.6rem;
         font-style: italic;
     }
-
     @include respond(768px) {
         p{
             font-size: 1.3rem;
